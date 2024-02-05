@@ -1,0 +1,21 @@
+﻿public enum ItemType
+{
+    Break = 0,
+    Int = 1,
+    Double = 2,
+    Float = 3,
+    String = 4,
+    Bool = 5,
+    Time = 6,
+    Enum = 7,
+    Array = 8,
+    File = 9,
+    Path = 10,
+    AssignFile = 11,
+    Printer = 12,
+    Color = 13,
+    Group = 14,
+    Com = 15,
+    Label = 16,
+    Camera = 17,
+}

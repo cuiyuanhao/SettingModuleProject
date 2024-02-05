@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+    <array name="基本设置" key="base">
+        <item type="bool" key="IsHeightFix" name="布局方式" description="true:高度固定宽度自适应，false:宽度固定高度自适应" >true</item>
+        <item type="int" key="RowCountMax" name="最大显示行数" description="参考分辨率和机器配置进行设置，默认20" min="1" increment="1">20</item>
+        <item type="int" key="ColumnCountMax" name="最大显示列数" description="最大显示列数，参考分辨率和机器配置进行设置，默认40" min="1" increment="1">40</item>
+        <item type="float" key="RowCountRangeScale" name="显示行数范围" description="此值*最大显示行数~最大显示行数" min="0" increment="0.1">0.6</item>
+        <item type="float" key="ColumnCountRangeScale" name="显示列数范围" description="此值*最大显示列数~最大显示列数" min="0" increment="0.1">0.5</item>
+        <item type="int" key="ViewCircleCount" name="浏览圈数量上限" description="浏览圈数量上限，默认6个" min="1" increment="1">6</item>
+        <item type="int" key="ViewCircleRadius" name="浏览圈直径" description="浏览圈直径，根据屏幕高度设置，默认1200" min="50" increment="50">800</item>
+        <item type="int" key="ReLoadIntervalSecond" name="切场时间间隔" description="切场时间间隔，单位：秒，默认30"  min="5" increment="5">30</item>
+        <item type="int" key="NoTouchCloseCircleSecond" name="无人操作浏览圈自动关闭" description="无人操作浏览圈自动关闭，单位：秒，默认：60"  min="5" increment="5">60</item>
+        <item type="int" key="NonSpreadPhotoCount" name="图片总数量触发避让" description="当前屏幕图片个数不足数时，不避让，默认：50"  min="5" increment="5">50</item>
+        <item type="int" key="DescriptionFontSize" name="标题和描述字体大小" description="标题和描述字体大小，根据屏幕高度设置，1920->20,1080->10"  min="5" increment="5">20</item>
+        <item type="int" key="BlackBorderSize" name="小图间隔宽度"  min="1" increment="1">20</item>
+        <item type="int" key="LoadStandbyItemSleepMilliSecond" name="加载待场图片睡眠间隔" description="加载待场图片睡眠间隔，单位：毫秒， 默认：50"  min="5" increment="5">50</item>
+        <item type="int" key="ViewCircleScrollItemCount" name="浏览圈轮播加载图片数量" description="浏览圈轮播加载图片数量，默认10"  min="1" increment="1">10</item>
+        <item type="int" key="ModelTransformRange" name="模型旋转幅度" description="模型旋转幅度，每次旋转角度，默认：20"  min="5" increment="5">20</item>
+        <item type="int" key="ModelScaleRange" name="模型缩放幅度" description="模型缩放幅度，双指操作偏移量大于此值时，才被识别，默认：5"  min="1" increment="1">5</item>
+        <item type="float" key="CoverCicleMoveSpeed" name="浏览圈弹走时间" description="浏览圈发生重叠时，弹到指定位置所用时间，默认0.2"  min="0.2" increment="0.2">0.2</item>
+        <item type="float" key="DoublePressInterval" name="双击识别时间" description="两次点击若发生在X秒内识别为双击，默认0.5"  min="0.1" increment="0.1">0.5</item>
+        <item type="bool" key="IsMovePerOffset" name="小图进场后是否移动" description="小图进场后是否移动，默认true" >true</item>
+        <item type="float" key="MovePerOffsetX" name="横向进场位移" description="小图进场后横向移动，每帧移动的位移，默认1"  min="0.2" increment="0.2">1</item>
+        <item type="float" key="MovePerOffsetY" name="纵向进场位移" description="小图进场后纵向移动，每帧移动的位移，默认0.6"  min="0.2" increment="0.2">0.6</item>
+        <item type="int" key="OutOfScreenWidthScale" name="屏幕外加载宽度" description="布局小图时屏幕外加载宽度：小图高度*此值，默认4"  min="1" increment="1">4</item>
+        <item type="int" key="OutOfScreenHeightScale" name="屏幕外加载宽度" description="布局小图时屏幕外加载高度：小图宽度*此值，默认2"  min="1" increment="1">2</item>
+        <item type="int" key="TextureScaleWidth" name="原图转小图缩略图" description=" 原图转小图缩略图，设定宽度，默认256"  min="1" increment="1">256</item>
+        <item type="float" key="SpreadSpeed" name="入场速度"  min="0.1" increment="0.1">0.1</item>
+        <item type="float" key="RebackSpeed" name="出场速度"  min="0.01" increment="0.01">0.07</item>
+        <item type="bool" key="IsOpenBgMusic" name="是否播放背景音乐" description="默认true" >true</item>
+    </array>
+    <array name="屏保设置" key="saver">
+        <item type="enum" key="type" name="屏保类型" value="normal">
+            <option key="none">无屏保</option>
+            <option key="normal" links="saverTimeout,saverSpeed">幻灯片</option>
+            <option key="logo" links="logoTimeout,logoSpeed,logoShowOther,logoFlash,logoShowBg,logoSize">播放图案</option>
+        </item>
+        <item type="int" key="saverTimeout" name="无人操作时间" unit="分钟(mi)" min="1" increment="1">8</item>
+        <item type="int" key="saverSpeed" name="切换速度" unit="秒(s)" min="2" increment="1">3</item>
+        <item type="int" key="logoTimeout" name="无人操作时间" unit="秒(s)" min="5" increment="1">5</item>
+        <item type="int" key="logoSpeed" name="图案切换速度" unit="秒(s)" min="5" increment="1">10</item>
+        <item type="bool" key="logoShowOther" name="填充非图案区域" links="logoFlash">false</item>
+        <item type="bool" key="logoFlash" name="闪烁">true</item>
+        <item type="bool" key="logoShowBg" name="显示背景图片">true</item>
+        <item type="int" key="logoSize" name="色块大小" unit="像素(px)" min="10">10</item>
+    </array>
+    <array name="安全设置" key="safe">
+        <item type="bool" key="UsePassword" name="启用密码" links="PassWord">true</item>
+        <item type="string" key="PassWord" name="退出密码" maxlength="4">1234</item>
+        <item type="bool" key="DesginMode" hide="true" name="启用设计模式">true</item>
+        <item type="label" key="break" name="启用设计模式">true</item>
+    </array>
+</settings>
